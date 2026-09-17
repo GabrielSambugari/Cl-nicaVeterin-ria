@@ -5,8 +5,8 @@ namespace ClínicaVeterinária.Models
     public class Consulta
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Telefone { get; set; }
+        public string Motivo { get; set; }
+        public DateTime DataHora{ get; set; }
 
         public int PetId { get; set; }
 

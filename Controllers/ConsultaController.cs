@@ -1,4 +1,5 @@
 ﻿using ClínicaVeterinária.Data;
+using ClínicaVeterinária.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -21,8 +22,15 @@ namespace ClínicaVeterinária.Controllers
         {
             return await _context.Consultas.ToListAsync();
         }
+        [HttpPost]
+        public async Task<IActionResult> AddConsulta(Consulta consulta)
+        {
+            _context.Consultas.Add(consulta);
+            await _context.SaveChangesAsync();
+            return Ok("Consulta adicionada com sucesso!");
+        }
 
 
-           
+
     }
 }

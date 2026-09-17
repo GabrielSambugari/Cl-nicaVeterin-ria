@@ -12,6 +12,6 @@ namespace ClínicaVeterinária.Models
         [JsonIgnore]
         public Tutor? Tutor { get; set; }
 
-        public ICollection<Tutor> Tutors { get; set; } = new List<Tutor>();
+     
     }
 }

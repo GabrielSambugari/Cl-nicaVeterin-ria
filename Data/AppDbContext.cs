@@ -12,8 +12,6 @@ namespace ClínicaVeterinária.Data
             public DbSet<Pet> Pets { get; set; }
             public DbSet<Tutor> Tutores { get; set; }
             public DbSet<Veterinario> Veterinarios { get; set; }
-
-
     }
 
     }
